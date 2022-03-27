@@ -14,10 +14,10 @@ public class BearMove extends Application {
     public static final int JUMP = 10;
 
     private ImageView Background;
-    private ImageView Tree1;
-    private ImageView Tree2;
-    private ImageView Tree3;
-    private ImageView Tree4;
+    private Tree Tree1;
+    private Tree Tree2;
+    private Tree Tree3;
+    private Tree Tree4;
     private Bear bear;
     //private ImageView FireBearView;
     //private ImageView WaterBearView;
@@ -27,7 +27,7 @@ public class BearMove extends Application {
     @Override
     public void start(Stage stage) {
 
-        bear = new Bear("Bear",0, 0, 100, 100, 2, 250, 30);
+        bear = new Bear("Bear",0, 0, 100, 100, 5, 250, 30);
 
         Image bg = new Image("bg.png", true);
 
@@ -38,10 +38,10 @@ public class BearMove extends Application {
         //Image spiritBear = new Image("Bear5.png", true);
 
         Background = new ImageView(bg);
-        Tree1 = new ImageView(Tree);
-        Tree2 = new ImageView(Tree);
-        Tree3 = new ImageView(Tree);
-        Tree4 = new ImageView(Tree);
+        Tree1 = new Tree(270, 530);
+        Tree2 = new Tree(330, 350);
+        Tree3 = new Tree(130, 200);
+        Tree4 = new Tree(420, 70);
         //FireBearView = new ImageView(fireBear);
         //WaterBearView = new ImageView(waterBear);
         //EarthBearView = new ImageView(earthBear);
@@ -52,17 +52,13 @@ public class BearMove extends Application {
         bear.getBearImageView().setX(bearStartCoordinate + 80);
         bear.getBearImageView().setY(bearStartCoordinate);
 
-        Tree1.setX(30);
-        Tree1.setY(30);
 
-        Tree2.setX(270);
-        Tree2.setY(30);
+        Tree1.initPosition();
+        Tree2.initPosition();
+        Tree3.initPosition();
+        Tree4.initPosition();
 
-        Tree3.setX(30);
-        Tree3.setY(270);
 
-        Tree4.setX(270);
-        Tree4.setY(270);
         //FireBearView.setX(bearStartCoordinate + 40);
         //FireBearView.setY(bearStartCoordinate);
 
@@ -79,7 +75,7 @@ public class BearMove extends Application {
 
         root.getChildren().addAll(Background, bear.getBearImageView());
 
-        root.getChildren().addAll(Tree1, Tree2, Tree3, Tree4);
+        root.getChildren().addAll(Tree1.treeImageView, Tree2.treeImageView, Tree3.treeImageView, Tree4.treeImageView);
 
         final int appHeight = 600;
         final int appWidth = 600;
