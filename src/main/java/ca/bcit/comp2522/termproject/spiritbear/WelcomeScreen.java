@@ -13,6 +13,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
+import javafx.event.ActionEvent;
+
+import java.util.EventListener;
 
 public class WelcomeScreen extends Application {
     public static void main(String[] args) { Application.launch(args);}
@@ -40,6 +43,7 @@ public class WelcomeScreen extends Application {
         playbtn.setTranslateX(textX + 50);
         playbtn.setTranslateY(textY + 50);
 
+
         //Quit Button
         Button quitbtn = new Button();
         quitbtn.setText("QUIT");
@@ -65,6 +69,8 @@ public class WelcomeScreen extends Application {
         stage.setScene(scene);
         stage.show();
     }
+
+
 
 
 }
