@@ -14,11 +14,11 @@ public class BearMove extends Application {
     public static final int JUMP = 10;
 
     private ImageView Background;
-    private ImageView BearView;
     private ImageView Tree1;
     private ImageView Tree2;
     private ImageView Tree3;
     private ImageView Tree4;
+    private Bear bear;
     //private ImageView FireBearView;
     //private ImageView WaterBearView;
     //private ImageView EarthBearView;
@@ -27,15 +27,16 @@ public class BearMove extends Application {
     @Override
     public void start(Stage stage) {
 
-        Image bg = new Image("bg.png", true);
-        Image bear = new Image("NormalBear.png", true);
-        Image Tree = new Image("Tree.png", true);
-        //Image fireBear = new Image("FireBear.png", true);
-        //Image waterBear = new Image("FireWaterBear.png", true);
-        //Image earthBear = new Image("FireWaterEarthBear.png", true);
-        //Image spiritBear = new Image("SpiritBear.png", true);
+        bear = new Bear("Bear",0, 0, 100, 100, 2, 250, 30);
 
-        BearView = new ImageView(bear);
+        Image bg = new Image("bg.png", true);
+
+        Image Tree = new Image("Tree.png", true);
+        //Image fireBear = new Image("Bear2.png", true);
+        //Image waterBear = new Image("Bear3.png", true);
+        //Image earthBear = new Image("Bear4.png", true);
+        //Image spiritBear = new Image("Bear5.png", true);
+
         Background = new ImageView(bg);
         Tree1 = new ImageView(Tree);
         Tree2 = new ImageView(Tree);
@@ -48,8 +49,8 @@ public class BearMove extends Application {
 
 
         final int bearStartCoordinate = 300;
-        BearView.setX(bearStartCoordinate + 80);
-        BearView.setY(bearStartCoordinate);
+        bear.getBearImageView().setX(bearStartCoordinate + 80);
+        bear.getBearImageView().setY(bearStartCoordinate);
 
         Tree1.setX(30);
         Tree1.setY(30);
@@ -76,7 +77,9 @@ public class BearMove extends Application {
 
         Group root = new Group();
 
-        root.getChildren().addAll(Background, BearView, Tree1, Tree2, Tree3, Tree4);
+        root.getChildren().addAll(Background, bear.getBearImageView());
+
+        root.getChildren().addAll(Tree1, Tree2, Tree3, Tree4);
 
         final int appHeight = 600;
         final int appWidth = 600;
@@ -94,28 +97,28 @@ public class BearMove extends Application {
     private void processKeyPress(KeyEvent keyEvent) {
         switch (keyEvent.getCode()) {
             case UP:
-                BearView.setY(BearView.getY() - JUMP);
+                bear.getBearImageView().setY(bear.getBearImageView().getY() - JUMP);
 //                FireBearView.setY(FireBearView.getY() - JUMP);
 //                WaterBearView.setY(WaterBearView.getY() - JUMP);
 //                EarthBearView.setY(EarthBearView.getY() - JUMP);
 //                SpiritBearView.setY(SpiritBearView.getY() - JUMP);
                 break;
             case DOWN:
-                BearView.setY(BearView.getY() + JUMP);
+                bear.getBearImageView().setY(bear.getBearImageView().getY() + JUMP);
 //                FireBearView.setY(FireBearView.getY() + JUMP);
 //                WaterBearView.setY(WaterBearView.getY() + JUMP);
 //                EarthBearView.setY(EarthBearView.getY() + JUMP);
 //                SpiritBearView.setY(SpiritBearView.getY() + JUMP);
                 break;
             case LEFT:
-                BearView.setX(BearView.getX() - JUMP);
+                bear.getBearImageView().setX(bear.getBearImageView().getX() - JUMP);
 //                FireBearView.setX(FireBearView.getX() - JUMP);
 //                WaterBearView.setX(WaterBearView.getX() - JUMP);
 //                EarthBearView.setX(EarthBearView.getX() - JUMP);
 //                SpiritBearView.setX(SpiritBearView.getX() - JUMP);
                 break;
             case RIGHT:
-                BearView.setX(BearView.getX() + JUMP);
+                bear.getBearImageView().setX(bear.getBearImageView().getX() + JUMP);
 //                FireBearView.setX(FireBearView.getX() + JUMP);
 //                WaterBearView.setX(WaterBearView.getX() + JUMP);
 //                EarthBearView.setX(EarthBearView.getX() + JUMP);
