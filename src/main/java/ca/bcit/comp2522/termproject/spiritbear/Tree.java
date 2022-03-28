@@ -18,4 +18,8 @@ public class Tree extends Obstacle {
         this.treeImageView.setX(this.xCoordinate);
         this.treeImageView.setY(this.yCoordinate);
     }
+
+    public int setPosition() {
+        return 1;
+    }
 }

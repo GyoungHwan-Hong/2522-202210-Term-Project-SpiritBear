@@ -21,4 +21,9 @@ public class Bear extends DynamicActors{
     public ImageView getBearImageView() {
         return bearImageView;
     }
+
+    public void initPosition() {
+        this.bearImageView.setX(this.xCoordinate);
+        this.bearImageView.setY(this.yCoordinate);
+    }
 }

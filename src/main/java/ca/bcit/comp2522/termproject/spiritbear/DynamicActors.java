@@ -1,5 +1,15 @@
 package ca.bcit.comp2522.termproject.spiritbear;
 
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+
 public abstract class DynamicActors extends Actors {
     int HP;
     int MP;
@@ -57,5 +67,36 @@ public abstract class DynamicActors extends Actors {
 
     public void setAttack(int attack) {
         this.attack = attack;
+    }
+
+    public boolean ValidMoveChecker(KeyCode keyCode, int[][] arr) {
+        switch (keyCode) {
+            case UP:
+                if (arr[this.getxCoordinate() / 10][this.getyCoordinate() / 10 + 1] == 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            case DOWN:
+                if (arr[this.getxCoordinate() / 10][this.getyCoordinate() / 10 - 1] == 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            case LEFT:
+                if (arr[this.getxCoordinate() / 10 - 1][this.getyCoordinate() / 10] == 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            case RIGHT:
+                if (arr[this.getxCoordinate() / 10 + 1][this.getyCoordinate() / 10] == 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            default:
+                return false;
+        }
     }
 }
