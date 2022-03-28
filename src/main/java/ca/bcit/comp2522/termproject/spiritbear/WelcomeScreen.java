@@ -1,24 +1,31 @@
 package ca.bcit.comp2522.termproject.spiritbear;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Separator;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
-import javafx.event.ActionEvent;
 
-import java.util.EventListener;
+import javax.swing.*;
+import java.awt.event.ActionListener;
+import java.time.LocalDate;
+
 
 public class WelcomeScreen extends Application {
     public static void main(String[] args) { Application.launch(args);}
+
+    BearMove bearMove = new BearMove();
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -63,14 +70,11 @@ public class WelcomeScreen extends Application {
 
         root.getChildren().addAll(welcome, layout);
 
-
-
         stage.setTitle("Spirit Bear Game");
         stage.setScene(scene);
         stage.show();
+
     }
-
-
 
 
 }

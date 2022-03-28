@@ -18,6 +18,9 @@ public abstract class Actors {
      * Stores the actor's Y coordinate.
      */
     int yCoordinate;
+    int width;
+    int height;
+
 
     /**
      * Constructs an object of type Actor
@@ -25,10 +28,12 @@ public abstract class Actors {
      * @param xCoordinate an int.
      * @param yCoordinate an integer.
      */
-    public Actors(String name, int xCoordinate, int yCoordinate) {
+    public Actors(String name, int xCoordinate, int yCoordinate, int width, int height) {
         this.name = name;
         this.xCoordinate = xCoordinate;
         this.yCoordinate = yCoordinate;
+        this.width = width;
+        this.height = height;
     }
 
     /**

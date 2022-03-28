@@ -18,8 +18,8 @@ public abstract class DynamicActors extends Actors {
     int attack;
     protected boolean isDead;
 
-    public DynamicActors(String name, int xCoordinate, int yCoordinate, int HP, int MP, int level, int experience, int attack) {
-        super(name, xCoordinate, yCoordinate);
+    public DynamicActors(String name, int xCoordinate, int yCoordinate, int width, int height, int HP, int MP, int level, int experience, int attack) {
+        super(name, xCoordinate, yCoordinate, width, height);
         this.HP = HP;
         this.MP = MP;
         this.level = level;
@@ -72,25 +72,25 @@ public abstract class DynamicActors extends Actors {
     public boolean ValidMoveChecker(KeyCode keyCode, int[][] arr) {
         switch (keyCode) {
             case UP:
-                if (arr[this.getxCoordinate() / 10][this.getyCoordinate() / 10 + 1] == 0) {
+                if (arr[this.getxCoordinate()][this.getyCoordinate() - height / 2] == 0) {
                     return true;
                 } else {
                     return false;
                 }
             case DOWN:
-                if (arr[this.getxCoordinate() / 10][this.getyCoordinate() / 10 - 1] == 0) {
+                if (arr[this.getxCoordinate()][this.getyCoordinate() + height / 2] == 0) {
                     return true;
                 } else {
                     return false;
                 }
             case LEFT:
-                if (arr[this.getxCoordinate() / 10 - 1][this.getyCoordinate() / 10] == 0) {
+                if (arr[this.getxCoordinate() - width / 2][this.getyCoordinate()] == 0) {
                     return true;
                 } else {
                     return false;
                 }
             case RIGHT:
-                if (arr[this.getxCoordinate() / 10 + 1][this.getyCoordinate() / 10] == 0) {
+                if (arr[this.getxCoordinate() + width / 2][this.getyCoordinate()] == 0) {
                     return true;
                 } else {
                     return false;

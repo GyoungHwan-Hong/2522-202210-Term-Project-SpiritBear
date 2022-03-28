@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 public class BearMove extends Application {
 
     public static final int JUMP = 10;
-    private final int[][] array = new int[60][60];
+    private final int[][] array = new int[600][600];
 
     private ImageView Background;
     private Tree Tree1;
@@ -26,7 +26,7 @@ public class BearMove extends Application {
     @Override
     public void start(Stage stage) {
 
-        bear = new Bear("Bear",300, 300, 100, 100, 5, 250, 30);
+        bear = new Bear("Bear",300, 300, 40,40,100, 100, 5, 250, 30);
 
         Image bg = new Image("bg.png", true);
 
@@ -38,30 +38,37 @@ public class BearMove extends Application {
         Tree4 = new Tree(420, 70);
 
 
-        for (int i = 0; i < 60; i++) {
-            for (int j = 0; j < 60; j++) {
-                if (i == Tree1.xCoordinate / 10 && j == Tree1.yCoordinate / 10) {
-                    array[i][j] = 1;
-                }
-                if (i == Tree2.xCoordinate / 10 && j == Tree2.yCoordinate / 10) {
-                    array[i][j] = 1;
-                }
-                if (i == Tree3.xCoordinate / 10 && j == Tree3.yCoordinate / 10) {
-                    array[i][j] = 1;
-                }
-                if (i == Tree4.xCoordinate / 10 && j == Tree4.yCoordinate / 10) {
-                    array[i][j] = 1;
-                }
-            }
-        }   //Insert tree's position in to 2D array (map).
-            //I will change this.
+//        for (int i = 0; i < 600; i++) {
+//            for (int j = 0; j < 600; j++) {
+//                if (i == Tree1.xCoordinate / 10 && j == Tree1.yCoordinate / 10) {
+//                    array[i][j] = 1;
+//                }
+//                if (i == Tree2.xCoordinate / 10 && j == Tree2.yCoordinate / 10) {
+//                    array[i][j] = 1;
+//                }
+//                if (i == Tree3.xCoordinate / 10 && j == Tree3.yCoordinate / 10) {
+//                    array[i][j] = 1;
+//                }
+//                if (i == Tree4.xCoordinate / 10 && j == Tree4.yCoordinate / 10) {
+//                    array[i][j] = 1;
+//                }
+//            }
+//        }   //Insert tree's position in to 2D array (map).
+//            //I will change this.
 
 
         bear.initPosition();
-        Tree1.initPosition();
-        Tree2.initPosition();
-        Tree3.initPosition();
-        Tree4.initPosition();
+        Tree1.initPosition(array);
+        Tree2.initPosition(array);
+        Tree3.initPosition(array);
+        Tree4.initPosition(array);
+
+//        for (int i = 0; i < 600; i++) {
+//            for (int j = 0; j < 600; j++) {
+//                System.out.printf(array[i][j]+"");
+//            }
+//            System.out.println();
+//        }
 
         Group root = new Group();
 
