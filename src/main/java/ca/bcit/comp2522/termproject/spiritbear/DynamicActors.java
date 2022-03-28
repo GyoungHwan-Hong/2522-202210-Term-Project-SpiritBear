@@ -1,14 +1,7 @@
 package ca.bcit.comp2522.termproject.spiritbear;
 
-import javafx.application.Application;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.paint.Color;
-import javafx.stage.Stage;
+
 
 public abstract class DynamicActors extends Actors {
     int HP;
