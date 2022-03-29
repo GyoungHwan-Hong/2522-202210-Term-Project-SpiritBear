@@ -21,8 +21,6 @@ public class BearMove extends Application {
     private Tree Tree4;
     private Bear bear;
 
-
-
     @Override
     public void start(Stage stage) {
 
