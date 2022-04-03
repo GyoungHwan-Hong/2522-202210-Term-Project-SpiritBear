@@ -9,7 +9,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-public class BearMove extends Application {
+public class Stage1 extends Application {
 
     public static final int JUMP = 10;
     private final int[][] array = new int[600][600];
@@ -19,6 +19,7 @@ public class BearMove extends Application {
     private Tree Tree2;
     private Tree Tree3;
     private Tree Tree4;
+    private NPC npc;
     private Bear bear;
 
     @Override
@@ -34,45 +35,20 @@ public class BearMove extends Application {
         Tree2 = new Tree(330, 350);
         Tree3 = new Tree(130, 200);
         Tree4 = new Tree(420, 70);
-
-
-//        for (int i = 0; i < 600; i++) {
-//            for (int j = 0; j < 600; j++) {
-//                if (i == Tree1.xCoordinate / 10 && j == Tree1.yCoordinate / 10) {
-//                    array[i][j] = 1;
-//                }
-//                if (i == Tree2.xCoordinate / 10 && j == Tree2.yCoordinate / 10) {
-//                    array[i][j] = 1;
-//                }
-//                if (i == Tree3.xCoordinate / 10 && j == Tree3.yCoordinate / 10) {
-//                    array[i][j] = 1;
-//                }
-//                if (i == Tree4.xCoordinate / 10 && j == Tree4.yCoordinate / 10) {
-//                    array[i][j] = 1;
-//                }
-//            }
-//        }   //Insert tree's position in to 2D array (map).
-//            //I will change this.
-
+        npc = new NPC(320, 250);
 
         bear.initPosition();
         Tree1.initPosition(array);
         Tree2.initPosition(array);
         Tree3.initPosition(array);
         Tree4.initPosition(array);
-
-//        for (int i = 0; i < 600; i++) {
-//            for (int j = 0; j < 600; j++) {
-//                System.out.printf(array[i][j]+"");
-//            }
-//            System.out.println();
-//        }
+        npc.initPosition(array);
 
         Group root = new Group();
 
         root.getChildren().addAll(Background, bear.getBearImageView());
 
-        root.getChildren().addAll(Tree1.treeImageView, Tree2.treeImageView, Tree3.treeImageView, Tree4.treeImageView);
+        root.getChildren().addAll(Tree1.treeImageView, Tree2.treeImageView, Tree3.treeImageView, Tree4.treeImageView, npc.npcImageView);
 
         final int appHeight = 600;
         final int appWidth = 600;
@@ -123,6 +99,11 @@ public class BearMove extends Application {
                     System.out.println(bear.xCoordinate + ", " + bear.yCoordinate);
                     break;
                 } else {
+                    break;
+                }
+            case SPACE:
+                if (bear.interaction(array)) {
+                    System.out.println("There is NPC");
                     break;
                 }
             default:

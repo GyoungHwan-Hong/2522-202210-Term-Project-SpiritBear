@@ -22,4 +22,16 @@ public class Bear extends DynamicActors{
         this.bearImageView.setX(this.xCoordinate);
         this.bearImageView.setY(this.yCoordinate);
     }
+
+    public boolean interaction(int arr[][]) {
+
+        for(int i = xCoordinate - 20; i <= xCoordinate + 20; i++) {
+            for(int j= yCoordinate - 20; j<= yCoordinate + 20; j++) {
+                if (arr[i][j] == 2) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
