@@ -5,6 +5,10 @@ import java.util.Properties;
 
 public class Login {
 
+    public Login() {
+
+    }
+
     public static boolean login(String userId, String password) throws SQLException, ClassNotFoundException {
 
         PreparedStatement pstmt;
@@ -27,7 +31,7 @@ public class Login {
 
         Statement stmt = connection.createStatement();
 
-        String SQL = "select userPassword from userinfo where userID = ?";
+        String SQL = "select password from userinfo where userID = ?";
         pstmt = connection.prepareStatement(SQL);
         pstmt.setString(1, userId);
         rs = pstmt.executeQuery();
