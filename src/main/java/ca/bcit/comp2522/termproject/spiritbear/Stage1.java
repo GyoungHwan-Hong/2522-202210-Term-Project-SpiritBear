@@ -8,6 +8,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.scene.shape.Rectangle;
+
+import java.awt.*;
 
 public class Stage1 extends Application {
 
@@ -21,6 +24,9 @@ public class Stage1 extends Application {
     private Tree Tree4;
     private NPC npc;
     private Bear bear;
+    private Rectangle rect;
+
+    private String message = "Hello welcome to the world.";
 
     @Override
     public void start(Stage stage) {
@@ -36,6 +42,10 @@ public class Stage1 extends Application {
         Tree3 = new Tree(130, 200);
         Tree4 = new Tree(420, 70);
         npc = new NPC(320, 250);
+
+        rect = new Rectangle( 25, 475, 550, 150);
+        rect.setStroke(Color.WHITE);
+        rect.setVisible(false);
 
         bear.initPosition();
         Tree1.initPosition(array);
@@ -69,7 +79,6 @@ public class Stage1 extends Application {
                 if (bear.ValidMoveChecker(keyEvent.getCode(), array)) {
                     bear.bearImageView.setY(bear.bearImageView.getY() - JUMP);
                     bear.setyCoordinate(bear.yCoordinate - JUMP);
-                    System.out.println(bear.xCoordinate + ", " + bear.yCoordinate);
                     break;
                 } else {
                     break;
@@ -78,7 +87,6 @@ public class Stage1 extends Application {
                 if (bear.ValidMoveChecker(keyEvent.getCode(), array)) {
                     bear.bearImageView.setY(bear.bearImageView.getY() + JUMP);
                     bear.setyCoordinate(bear.yCoordinate + JUMP);
-                    System.out.println(bear.xCoordinate + ", " + bear.yCoordinate);
                     break;
                 } else {
                     break;
@@ -87,7 +95,6 @@ public class Stage1 extends Application {
                 if (bear.ValidMoveChecker(keyEvent.getCode(), array)) {
                     bear.bearImageView.setX(bear.bearImageView.getX() - JUMP);
                     bear.setxCoordinate(bear.xCoordinate - JUMP);
-                    System.out.println(bear.xCoordinate + ", " + bear.yCoordinate);
                     break;
                 } else {
                     break;
@@ -96,14 +103,13 @@ public class Stage1 extends Application {
                 if (bear.ValidMoveChecker(keyEvent.getCode(), array)) {
                     bear.bearImageView.setX(bear.bearImageView.getX() + JUMP);
                     bear.setxCoordinate(bear.xCoordinate + JUMP);
-                    System.out.println(bear.xCoordinate + ", " + bear.yCoordinate);
                     break;
                 } else {
                     break;
                 }
             case SPACE:
-                if (bear.interaction(array)) {
-                    System.out.println("There is NPC");
+                if (bear.interaction(array) != 0) {
+                    rect.setVisible(true);
                     break;
                 }
             default:
