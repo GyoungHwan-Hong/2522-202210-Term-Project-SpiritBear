@@ -7,11 +7,13 @@ public class NPC extends Obstacle {
 
     Image npc;
     ImageView npcImageView;
+    int npcId;
 
     public NPC(int xCoordinate, int yCoordinate) {
         super(xCoordinate, yCoordinate, 40, 40);
         this.npc = new Image("NPC1.png", true);
         this.npcImageView = new ImageView(npc);
+        this.npcId = 2;
     }
 
     public void initPosition(int[][] arr) {
@@ -26,10 +28,19 @@ public class NPC extends Obstacle {
 
         for ( int i = si; i <= fi; i++) {
             for (int j = sj; j <= fj ; j++) {
-                arr[i][j] = 2;
+                arr[i][j] = npcId;
             }
         }
     }
+
+    public int getNpcId(final int inputNPCId) {
+        if (inputNPCId == this.npcId) {
+            return this.npcId;
+        }
+        return 0;
+    }
+
+
 
     public int setPosition() {
         return 1;

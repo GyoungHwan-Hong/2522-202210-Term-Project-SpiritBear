@@ -23,15 +23,15 @@ public class Bear extends DynamicActors{
         this.bearImageView.setY(this.yCoordinate);
     }
 
-    public boolean interaction(int arr[][]) {
+    public int interaction(int arr[][]) {
 
         for(int i = xCoordinate - 20; i <= xCoordinate + 20; i++) {
             for(int j= yCoordinate - 20; j<= yCoordinate + 20; j++) {
-                if (arr[i][j] == 2) {
-                    return true;
+                if (arr[i][j] != 0) {
+                    return arr[i][j];
                 }
             }
         }
-        return false;
+        return 0;
     }
 }
