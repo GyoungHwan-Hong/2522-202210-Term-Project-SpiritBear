@@ -17,9 +17,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
-import java.sql.*;
-import java.util.Properties;
-
 
 public class WelcomeScreen extends Application {
     public static void main(String[] args) {Application.launch(args);}
@@ -32,10 +29,9 @@ public class WelcomeScreen extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-
         Group root = new Group();
         VBox vbox = new VBox(new Separator(Orientation.VERTICAL));
-        Image bgImage = new Image("welcome-screen3.jpg", true);
+        Image bgImage = new Image("welcome-screen3.png", true);
 
 
         final int appHeight = 800;
@@ -68,7 +64,6 @@ public class WelcomeScreen extends Application {
                 stage1.start(stage);
             }
         });
-
 
 
         vbox.getChildren().addAll(playbtn, quitbtn);
