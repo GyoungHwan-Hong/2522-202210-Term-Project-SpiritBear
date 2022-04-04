@@ -10,6 +10,7 @@ module ca.bcit.comp2522.termproject.spiritbear {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires java.desktop;
+    requires java.sql;
 
     opens ca.bcit.comp2522.termproject.spiritbear to javafx.fxml;
     exports ca.bcit.comp2522.termproject.spiritbear;
