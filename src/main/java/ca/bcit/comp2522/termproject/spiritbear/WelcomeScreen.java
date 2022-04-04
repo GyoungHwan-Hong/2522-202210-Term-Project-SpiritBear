@@ -14,8 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextAlignment;
+
 import javafx.stage.Stage;
 
 public class WelcomeScreen extends Application {
@@ -24,6 +23,7 @@ public class WelcomeScreen extends Application {
     //Play button
     Button playbtn = new Button();
     Button quitbtn = new Button();
+    Button loginbtn = new Button();
     private ImageView Background;
 
 
@@ -31,11 +31,11 @@ public class WelcomeScreen extends Application {
     public void start(Stage stage) throws Exception {
         Group root = new Group();
         VBox vbox = new VBox(new Separator(Orientation.VERTICAL));
-        Image bgImage = new Image("welcome-screen3.png", true);
+        Image bgImage = new Image("welcome-screen3.jpg", true);
 
 
-        final int appHeight = 800;
-        final int appWidth = 500;
+        final int appHeight = 600;
+        final int appWidth = 850;
         final double textX = (appWidth / 2 ) - 100;
         final double textY = (appHeight / 2);
 
@@ -44,7 +44,7 @@ public class WelcomeScreen extends Application {
         //btn QUIT
         quitbtn.setText("QUIT");
         quitbtn.setPrefSize(100,50);
-        quitbtn.setTranslateX(textX + 50);
+        quitbtn.setTranslateX(textX + 400);
         quitbtn.setTranslateY(textY + 100);
         quitbtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -56,8 +56,8 @@ public class WelcomeScreen extends Application {
         //btn PLAY
         playbtn.setText("PLAY");
         playbtn.setPrefSize(100,50);
-        playbtn.setTranslateX(textX + 50);
-        playbtn.setTranslateY(textY + 50);
+        playbtn.setTranslateX(textX + 400);
+        playbtn.setTranslateY(textY + 75);
         playbtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -65,12 +65,15 @@ public class WelcomeScreen extends Application {
             }
         });
 
+        //btn LOGIN
+        loginbtn.setText("LOG-IN");
+        loginbtn.setPrefSize(100,50);
+        loginbtn.setTranslateX(textX + 400);
+        loginbtn.setTranslateY(textY - 100);
 
-        vbox.getChildren().addAll(playbtn, quitbtn);
 
+        vbox.getChildren().addAll(playbtn, quitbtn, loginbtn);
 
-        Text welcome = new Text(textX, textY - 100, "Welcome to Adventures of Spiritbear!");
-        welcome.setTextAlignment(TextAlignment.CENTER);
 
         StackPane layout = new StackPane();
         layout.setPrefSize(200, 190);
@@ -80,7 +83,7 @@ public class WelcomeScreen extends Application {
         root.getChildren().addAll(Background);
 
 
-        root.getChildren().addAll(welcome, layout);
+        root.getChildren().addAll(layout);
         Scene scene = new Scene(root, appWidth, appHeight, Color.BLACK); //Color.black sets the background to black
 
 
