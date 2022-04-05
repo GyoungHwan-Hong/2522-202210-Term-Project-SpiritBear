@@ -108,8 +108,9 @@ public class WelcomeScreen extends Application {
                 }
             }
         });
+//        vbox.getChildren().addAll(playbtn, quitbtn, loginbtn, id, pw);
 
-        vbox.getChildren().addAll(playbtn, quitbtn, loginbtn,id,pw);
+        vbox.getChildren().addAll(quitbtn, loginbtn, id, pw);
 
 
         StackPane layout = new StackPane();

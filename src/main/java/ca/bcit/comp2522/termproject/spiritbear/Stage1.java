@@ -109,6 +109,7 @@ public class Stage1 extends Application {
                 }
             case SPACE:
                 if (bear.interaction(array) != 0) {
+                    System.out.println("There is NPC (ID : "+ bear.interaction(array) +")");
                     rect.setVisible(true);
                     break;
                 }
