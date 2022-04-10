@@ -24,12 +24,15 @@ public class QustionAnswerBox extends ChoiceDialog {
     public QustionAnswerBox(int id) {
         int npcid = id;
 
-        final String [] answerData = {"First", "Second", "Third", "Fourth"};
+        Quiz quiz = new Quiz(id);
+
+
+        final String [] answerData = quiz.answerList;
 
         dialogData = Arrays.asList(answerData);
         ChoiceDialog dialog = new ChoiceDialog(dialogData.get(0), dialogData);
         dialog.setTitle("NPC NAME");
-        dialog.setHeaderText("Here is the quiz");
+        dialog.setHeaderText(quiz.question);
         dialog.setContentText("Answer");
 
         Optional<String> result = dialog.showAndWait();

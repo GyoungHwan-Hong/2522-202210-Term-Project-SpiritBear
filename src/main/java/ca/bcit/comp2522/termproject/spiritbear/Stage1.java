@@ -73,42 +73,32 @@ public class Stage1 extends Application {
                 if (bear.ValidMoveChecker(keyEvent.getCode(), array)) {
                     bear.bearImageView.setY(bear.bearImageView.getY() - JUMP);
                     bear.setyCoordinate(bear.yCoordinate - JUMP);
-                    break;
-                } else {
-                    break;
                 }
+                break;
             case DOWN:
                 if (bear.ValidMoveChecker(keyEvent.getCode(), array)) {
                     bear.bearImageView.setY(bear.bearImageView.getY() + JUMP);
                     bear.setyCoordinate(bear.yCoordinate + JUMP);
-                    break;
-                } else {
-                    break;
                 }
+                break;
             case LEFT:
                 if (bear.ValidMoveChecker(keyEvent.getCode(), array)) {
                     bear.bearImageView.setX(bear.bearImageView.getX() - JUMP);
                     bear.setxCoordinate(bear.xCoordinate - JUMP);
-                    break;
-                } else {
-                    break;
                 }
+                break;
             case RIGHT:
                 if (bear.ValidMoveChecker(keyEvent.getCode(), array)) {
                     bear.bearImageView.setX(bear.bearImageView.getX() + JUMP);
                     bear.setxCoordinate(bear.xCoordinate + JUMP);
-                    break;
-                } else {
-                    break;
                 }
+                break;
             case SPACE:
                 if (bear.interaction(array) != 0) {
                     qb = new QustionAnswerBox(bear.interaction(array));
                     System.out.println(qb.getUserChoice());
-                    break;
-                } else {
-                    break;
                 }
+                break;
             default:
                 break; // Does nothing if it's not an arrow key.
         }
