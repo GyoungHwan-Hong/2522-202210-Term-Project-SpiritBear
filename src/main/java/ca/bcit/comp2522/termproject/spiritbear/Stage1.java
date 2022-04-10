@@ -6,11 +6,11 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.scene.shape.Rectangle;
-
-import java.awt.*;
 
 public class Stage1 extends Application {
 
@@ -24,9 +24,7 @@ public class Stage1 extends Application {
     private Tree Tree4;
     private NPC npc;
     private Bear bear;
-    private Rectangle rect;
-
-    private String message = "Hello welcome to the world.";
+    private QustionAnswerBox qb;
 
     @Override
     public void start(Stage stage) {
@@ -42,10 +40,6 @@ public class Stage1 extends Application {
         Tree3 = new Tree(130, 200);
         Tree4 = new Tree(420, 70);
         npc = new NPC(320, 250);
-
-        rect = new Rectangle( 25, 475, 550, 150);
-        rect.setStroke(Color.WHITE);
-        rect.setVisible(false);
 
         bear.initPosition();
         Tree1.initPosition(array);
@@ -109,8 +103,10 @@ public class Stage1 extends Application {
                 }
             case SPACE:
                 if (bear.interaction(array) != 0) {
-                    System.out.println("There is NPC (ID : "+ bear.interaction(array) +")");
-                    rect.setVisible(true);
+                    qb = new QustionAnswerBox(bear.interaction(array));
+                    System.out.println(qb.getUserChoice());
+                    break;
+                } else {
                     break;
                 }
             default:
