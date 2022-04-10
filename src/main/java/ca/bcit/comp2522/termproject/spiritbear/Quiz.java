@@ -25,7 +25,7 @@ public class Quiz {
     }};
 
 
-    String correctAnswer = "First";
+    String correctAnswer = "Aimee";
 
 
     public Quiz(final int npcid) {
