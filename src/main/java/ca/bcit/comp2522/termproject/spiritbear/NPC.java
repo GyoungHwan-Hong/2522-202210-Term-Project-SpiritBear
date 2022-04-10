@@ -9,11 +9,11 @@ public class NPC extends Obstacle {
     ImageView npcImageView;
     int npcId;
 
-    public NPC(int xCoordinate, int yCoordinate) {
-        super(xCoordinate, yCoordinate, 40, 40);
-        this.npc = new Image("NPC1.png", true);
+    public NPC(int xCoordinate, int yCoordinate, int npcId) {
+        super(xCoordinate, yCoordinate, 40, 40, 2);
+        this.npc = new Image("NPC"+npcId+".png", true);
         this.npcImageView = new ImageView(npc);
-        this.npcId = 2;
+        this.npcId = npcId;
     }
 
     public void initPosition(int[][] arr) {
@@ -39,7 +39,6 @@ public class NPC extends Obstacle {
         }
         return 0;
     }
-
 
 
     public int setPosition() {

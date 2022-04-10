@@ -1,17 +1,9 @@
 package ca.bcit.comp2522.termproject.spiritbear;
 
-import javafx.geometry.Pos;
-import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceDialog;
-import javafx.scene.control.Dialog;
-import javafx.scene.control.DialogPane;
-import javafx.scene.layout.VBox;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Text;
-import javafx.stage.Stage;
-
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 public class QustionAnswerBox extends ChoiceDialog {
@@ -19,12 +11,12 @@ public class QustionAnswerBox extends ChoiceDialog {
 
     private List<String> dialogData;
     private String selected;
-
+    private Quiz quiz;
 
     public QustionAnswerBox(int id) {
         int npcid = id;
 
-        Quiz quiz = new Quiz(id);
+         quiz = new Quiz(id);
 
 
         final String [] answerData = quiz.answerList;
@@ -44,8 +36,13 @@ public class QustionAnswerBox extends ChoiceDialog {
         }
     }
 
-    public String getUserChoice() {
-        return selected;
+    public boolean getUserChoice() {
+        System.out.println(selected);
+        System.out.println(quiz.correctAnswer);
+        if (selected == quiz.correctAnswer) {
+            return true;
+        } else {
+            return false;
+        }
     }
-
 }

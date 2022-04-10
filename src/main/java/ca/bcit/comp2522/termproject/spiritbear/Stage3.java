@@ -6,13 +6,10 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import javafx.scene.shape.Rectangle;
 
-public class Stage1 extends Application {
+public class Stage3 extends Application {
 
     public static final int JUMP = 10;
     private final int[][] array = new int[600][600];
@@ -30,13 +27,12 @@ public class Stage1 extends Application {
     private Teleport teleport;
     private Stage temp_stage;
 
-
     @Override
     public void start(Stage stage) {
 
         temp_stage = stage;
 
-        bear = new Bear("Bear",300, 300, 40,40,100, 100, 1, 250, 30);
+        bear = new Bear("Bear",300, 300, 40,40,100, 100, 3, 250, 30);
 
         Image bg = new Image("bg.png", true);
 
@@ -105,9 +101,9 @@ public class Stage1 extends Application {
                 }
                 break;
             case SPACE:
-                if (bear.interaction(array) == 100 && bear.level == 2) {
-                    Stage2 stage2 = new Stage2();
-                    stage2.start(temp_stage);
+                if (bear.interaction(array) == 100 && bear.level == 4) {
+                    Stage4 stage4 = new Stage4();
+                    stage4.start(temp_stage);
                 }
                 if (bear.interaction(array) != 0) {
                     qb = new QustionAnswerBox(bear.interaction(array));

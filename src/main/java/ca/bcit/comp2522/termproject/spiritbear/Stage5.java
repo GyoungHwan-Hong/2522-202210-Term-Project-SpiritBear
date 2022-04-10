@@ -6,13 +6,10 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import javafx.scene.shape.Rectangle;
 
-public class Stage1 extends Application {
+public class Stage5 extends Application {
 
     public static final int JUMP = 10;
     private final int[][] array = new int[600][600];
@@ -30,18 +27,13 @@ public class Stage1 extends Application {
     private Teleport teleport;
     private Stage temp_stage;
 
-
     @Override
     public void start(Stage stage) {
 
-        temp_stage = stage;
-
-        bear = new Bear("Bear",300, 300, 40,40,100, 100, 1, 250, 30);
+        bear = new Bear("Bear",300, 300, 40,40,100, 100, 5, 250, 30);
 
         Image bg = new Image("bg.png", true);
 
-
-        teleport = new Teleport( 200, 200, 40, 40, 100);
 
         Background = new ImageView(bg);
         Tree1 = new Tree(270, 530);
@@ -61,7 +53,7 @@ public class Stage1 extends Application {
 
         Group root = new Group();
 
-        root.getChildren().addAll(Background, bearImageView, teleport.getImageView());
+        root.getChildren().addAll(Background, bearImageView);
 
         root.getChildren().addAll(Tree1.treeImageView, Tree2.treeImageView, Tree3.treeImageView, Tree4.treeImageView, npc.npcImageView);
 
@@ -105,10 +97,6 @@ public class Stage1 extends Application {
                 }
                 break;
             case SPACE:
-                if (bear.interaction(array) == 100 && bear.level == 2) {
-                    Stage2 stage2 = new Stage2();
-                    stage2.start(temp_stage);
-                }
                 if (bear.interaction(array) != 0) {
                     qb = new QustionAnswerBox(bear.interaction(array));
                     if (qb.getUserChoice()) {

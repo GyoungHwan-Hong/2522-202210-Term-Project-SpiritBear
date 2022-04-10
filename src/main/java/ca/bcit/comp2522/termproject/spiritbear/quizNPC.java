@@ -9,7 +9,7 @@ public class quizNPC extends Obstacle{
     int npcId;
 
     public quizNPC(int xCoordinate, int yCoordinate) {
-        super(xCoordinate, yCoordinate, 40, 40);
+        super(xCoordinate, yCoordinate, 40, 40, 2);
         this.npc = new Image("totem_pole.png", true);
         this.npcImageView = new ImageView(npc);
         this.npcId = 3;
