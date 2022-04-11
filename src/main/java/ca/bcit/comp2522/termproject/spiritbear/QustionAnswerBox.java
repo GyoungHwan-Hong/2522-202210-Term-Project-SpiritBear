@@ -12,6 +12,7 @@ public class QustionAnswerBox extends ChoiceDialog {
     private List<String> dialogData;
     private String selected;
     private Quiz quiz;
+    private String answer;
 
     public QustionAnswerBox(int id) {
         int npcid = id;
@@ -30,6 +31,7 @@ public class QustionAnswerBox extends ChoiceDialog {
         Optional<String> result = dialog.showAndWait();
 
         selected = "cancelled.";
+        answer = quiz.answerHashMap.get(id);
 
         if (result.isPresent()) {
             selected = result.get();
@@ -38,8 +40,8 @@ public class QustionAnswerBox extends ChoiceDialog {
 
     public boolean getUserChoice() {
         System.out.println(selected);
-        System.out.println(quiz.correctAnswer);
-        if (selected == quiz.correctAnswer) {
+        if (selected == answer) {
+            System.out.println(answer);
             return true;
         } else {
             return false;
