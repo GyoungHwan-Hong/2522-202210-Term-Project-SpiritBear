@@ -4,8 +4,7 @@ import java.util.HashMap;
 
 public class Quiz {
     protected final String question;
-    protected final String answer;
-    //protected final String hint;
+    protected final String correctAanswer;
     protected final String [] answerList;
 
 
@@ -25,12 +24,10 @@ public class Quiz {
     }};
 
 
-    String correctAnswer = "Aimee";
-
 
     public Quiz(final int npcid) {
         this.question = questionHashMap.get(npcid);
-        this.answer = answerHashMap.get(npcid);
+        this.correctAanswer = answerHashMap.get(npcid);
         this.answerList = answerListHashMap.get(npcid);
     }
 
