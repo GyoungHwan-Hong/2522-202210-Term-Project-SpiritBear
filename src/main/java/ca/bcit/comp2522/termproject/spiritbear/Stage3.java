@@ -44,7 +44,7 @@ public class Stage3 extends Application {
         Tree2 = new Tree(330, 350);
         Tree3 = new Tree(130, 200);
         Tree4 = new Tree(420, 70);
-        npc = new NPC(320, 250,2);
+        npc = new NPC(320, 250,3);
 
         bear.initPosition();
         bearImageView = bear.getBearImageView();
