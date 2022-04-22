@@ -10,7 +10,7 @@ public class NPC extends Obstacle {
     int npcId;
 
     public NPC(int xCoordinate, int yCoordinate, int npcId) {
-        super(xCoordinate, yCoordinate, 40, 40, 2);
+        super(xCoordinate, yCoordinate, 40, 40, npcId);
         this.npc = new Image("NPC"+npcId+".png", true);
         this.npcImageView = new ImageView(npc);
         this.npcId = npcId;

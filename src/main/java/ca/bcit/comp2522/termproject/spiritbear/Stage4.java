@@ -14,7 +14,7 @@ public class Stage4 extends Application {
     public static final int JUMP = 10;
     private final int[][] array = new int[600][600];
 
-    private ImageView Background;
+    private ImageView background;
     private ImageView bearImageView;
     private Tree Tree1;
     private Tree Tree2;
@@ -39,7 +39,7 @@ public class Stage4 extends Application {
 
         teleport = new Teleport( 200, 200, 40, 40, 100);
 
-        Background = new ImageView(bg);
+        background = new ImageView(bg);
         Tree1 = new Tree(270, 530);
         Tree2 = new Tree(330, 350);
         Tree3 = new Tree(130, 200);
@@ -57,7 +57,7 @@ public class Stage4 extends Application {
 
         Group root = new Group();
 
-        root.getChildren().addAll(Background, bearImageView, teleport.getImageView());
+        root.getChildren().addAll(background, bearImageView, teleport.getImageView());
 
         root.getChildren().addAll(Tree1.treeImageView, Tree2.treeImageView, Tree3.treeImageView, Tree4.treeImageView, npc.npcImageView);
 

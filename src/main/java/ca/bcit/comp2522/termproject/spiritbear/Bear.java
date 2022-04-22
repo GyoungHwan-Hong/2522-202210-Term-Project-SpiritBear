@@ -3,8 +3,12 @@ package ca.bcit.comp2522.termproject.spiritbear;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-public class Bear extends DynamicActors{
-
+/**
+ * Bear class.
+ * @author GyoungHwan Hong
+ * @version 2022
+ */
+public class Bear extends DynamicActors {
     ImageView bearImageView;
     Image bearImage;
 
