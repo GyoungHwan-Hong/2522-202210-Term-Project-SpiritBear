@@ -20,10 +20,27 @@ public class Stage2 extends Application {
     private Tree Tree2;
     private Tree Tree3;
     private Tree Tree4;
+    private Tree Tree5;
+    private Tree Tree6;
+    private Tree Tree7;
+    private Tree Tree8;
+    private Tree Tree9;
+    private Tree Tree10;
+    private Tree Tree11;
+    private Tree Tree12;
+    private Tree Tree13;
+    private Tree Tree14;
+    private Tree Tree15;
+    private Tree Tree16;
+    private Tree Tree17;
+    private Tree Tree18;
+    private Tree Tree19;
+
     private NPC npc1;
     private NPC npc2;
     private NPC npc3;
-    private olympicRings oRing;
+    private NPC npc4;
+    private NPC npc5;
     private Bear bear;
     private QustionAnswerBox qb;
 
@@ -41,17 +58,36 @@ public class Stage2 extends Application {
         Image bg = new Image("bg.png", true);
 
 
-        teleport = new Teleport( 200, 200, 40, 40, 100);
+        teleport = new Teleport( 550, 300, 40, 40, 100);
 
         background = new ImageView(bg);
-        Tree1 = new Tree(270, 530);
-        Tree2 = new Tree(330, 350);
-        Tree3 = new Tree(130, 200);
-        Tree4 = new Tree(420, 70);
-        oRing = new olympicRings(200, 25);
-        npc1 = new NPC(320, 230,23);
-        npc2 = new NPC(300, 250,22);
-        npc3 = new NPC(280, 270,23);
+
+        Tree1 = new Tree(550, 550);
+        Tree2 = new Tree(550, 350);
+        Tree3 = new Tree(550, 250);
+        Tree4 = new Tree(550, 200);
+        Tree5 = new Tree(550, 550);
+        Tree6 = new Tree(550, 500);
+        Tree7 = new Tree(550, 450);
+        Tree8 = new Tree(550, 400);
+        Tree9 = new Tree(550, 150);
+        Tree10 = new Tree(550, 100);
+        Tree11 = new Tree(550, 50);
+        Tree12 = new Tree(300, 20);
+        Tree13 = new Tree(500, 20);
+        Tree14 = new Tree(450, 20);
+        Tree15 = new Tree(400, 20);
+        Tree16 = new Tree(350, 20);
+        Tree17 = new Tree(250, 20);
+        Tree18 = new Tree(200, 20);
+        Tree19 = new Tree(150, 20);
+
+
+        npc1 = new NPC(350, 60,61);
+        npc2 = new NPC(450, 100,62);
+        npc3 = new NPC(400, 325,63);
+        npc4 = new NPC(450, 450,64);
+        npc5 = new NPC(425, 525,65);
 
 
         bear.initPosition();
@@ -60,17 +96,37 @@ public class Stage2 extends Application {
         Tree2.initPosition(array);
         Tree3.initPosition(array);
         Tree4.initPosition(array);
-        oRing.initPosition(array);
+        Tree5.initPosition(array);
+        Tree6.initPosition(array);
+        Tree7.initPosition(array);
+        Tree8.initPosition(array);
+        Tree9.initPosition(array);
+        Tree10.initPosition(array);
+        Tree11.initPosition(array);
+        Tree12.initPosition(array);
+        Tree13.initPosition(array);
+        Tree14.initPosition(array);
+        Tree15.initPosition(array);
+        Tree16.initPosition(array);
+        Tree17.initPosition(array);
+        Tree18.initPosition(array);
+        Tree19.initPosition(array);
         teleport.initPosition(array);
         npc1.initPosition(array);
         npc2.initPosition(array);
         npc3.initPosition(array);
+        npc4.initPosition(array);
+        npc5.initPosition(array);
 
         Group root = new Group();
 
         root.getChildren().addAll(background, bearImageView, teleport.getImageView());
 
-        root.getChildren().addAll(Tree1.treeImageView, Tree2.treeImageView, Tree3.treeImageView, Tree4.treeImageView, npc1.npcImageView,npc2.npcImageView,npc3.npcImageView,oRing.olympicRingImageView);
+        root.getChildren().addAll(Tree1.treeImageView, Tree2.treeImageView, Tree3.treeImageView, Tree4.treeImageView,
+                Tree5.treeImageView, Tree6.treeImageView, Tree7.treeImageView, Tree8.treeImageView, Tree9.treeImageView,
+                Tree10.treeImageView, Tree11.treeImageView, Tree12.treeImageView, Tree13.treeImageView, Tree14.treeImageView,
+                Tree15.treeImageView, Tree16.treeImageView, Tree17.treeImageView, Tree18.treeImageView, Tree19.treeImageView,
+                npc1.npcImageView,npc2.npcImageView,npc3.npcImageView, npc4.npcImageView, npc5.npcImageView);
 
         final int appHeight = 600;
         final int appWidth = 600;
