@@ -24,6 +24,10 @@ public class Stage1 extends Application {
     private EverGreenTree Tree6;
     private EverGreenTree Tree7;
     private NPC npc;
+    private NPC npc2;
+    private NPC npc3;
+    private NPC npc4;
+    private NPC npc5;
     private OlympicRings oring;
     private Bear bear;
     private QustionAnswerBox qb;
@@ -44,15 +48,19 @@ public class Stage1 extends Application {
         Teleport teleport = new Teleport(500, 500, 40, 40, 100);
 
         background = new ImageView(bg);
-        Tree1 = new EverGreenTree(100, 25);
-        Tree2 = new EverGreenTree(100, 55);
-        Tree3 = new EverGreenTree(100, 85);
-        Tree4 = new EverGreenTree(100, 115);
-        Tree5 = new EverGreenTree(70, 115);
-        Tree6 = new EverGreenTree(45, 115);
-        Tree7= new EverGreenTree(20, 115);
+        Tree1 = new EverGreenTree(100, 155);
+        Tree2 = new EverGreenTree(100, 185);
+        Tree3 = new EverGreenTree(100, 215);
+        Tree4 = new EverGreenTree(100, 245);
+        Tree5 = new EverGreenTree(70, 245);
+        Tree6 = new EverGreenTree(45, 245);
+        Tree7= new EverGreenTree(20, 245);
         oring = new OlympicRings(200, 22);
-        npc = new NPC(20, 20,2);
+        npc = new NPC(450, 275,45);
+        npc2 = new NPC(50,500, 41);
+        npc3 = new NPC(250,300, 42);
+        npc4 = new NPC(275,350, 43);
+        npc5 = new NPC(400,250, 44);
 
         bear.initPosition();
         bearImageView = bear.getBearImageView();
@@ -65,13 +73,18 @@ public class Stage1 extends Application {
         Tree7.initPosition(array);
         teleport.initPosition(array);
         npc.initPosition(array);
+        npc2.initPosition(array);
+        npc3.initPosition(array);
+        npc4.initPosition(array);
+        npc5.initPosition(array);
 
         Group root = new Group();
 
         root.getChildren().addAll(background, bearImageView, teleport.getImageView());
 
         root.getChildren().addAll(Tree1.egTreeImageView, Tree2.egTreeImageView, Tree3.egTreeImageView, Tree4.egTreeImageView,
-                Tree5.egTreeImageView, Tree6.egTreeImageView, Tree7.egTreeImageView,npc.npcImageView, oring.olympicRingImageView);
+                Tree5.egTreeImageView, Tree6.egTreeImageView, Tree7.egTreeImageView,npc.npcImageView,
+                npc2.npcImageView, npc3.npcImageView, npc4.npcImageView, npc5.npcImageView, oring.olympicRingImageView);
 
         final int appHeight = 600;
         final int appWidth = 600;
