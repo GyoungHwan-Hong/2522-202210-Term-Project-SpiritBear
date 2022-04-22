@@ -3,12 +3,12 @@ package ca.bcit.comp2522.termproject.spiritbear;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-public class olympicRings extends Obstacle{
+public class OlympicRings extends Obstacle{
 
     Image olmypicRingImage;
     ImageView olympicRingImageView;
-    public olympicRings(int xCoordinate, int yCoordinate) {
-        super(xCoordinate, yCoordinate, 100, 100, 1);
+    public OlympicRings(int xCoordinate, int yCoordinate) {
+        super(xCoordinate, yCoordinate, 25, 400, 1);
         this.olmypicRingImage = new Image("olympicrings.png", true);
         this.olympicRingImageView = new ImageView(olmypicRingImage);
 
