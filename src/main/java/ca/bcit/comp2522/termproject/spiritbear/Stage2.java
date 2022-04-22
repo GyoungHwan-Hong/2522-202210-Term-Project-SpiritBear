@@ -14,13 +14,15 @@ public class Stage2 extends Application {
     public static final int JUMP = 10;
     private final int[][] array = new int[600][600];
 
-    private ImageView Background;
+    private ImageView background;
     private ImageView bearImageView;
     private Tree Tree1;
     private Tree Tree2;
     private Tree Tree3;
     private Tree Tree4;
-    private NPC npc;
+    private NPC npc1;
+    private NPC npc2;
+    private NPC npc3;
     private Bear bear;
     private QustionAnswerBox qb;
 
@@ -40,12 +42,14 @@ public class Stage2 extends Application {
 
         teleport = new Teleport( 200, 200, 40, 40, 100);
 
-        Background = new ImageView(bg);
+        background = new ImageView(bg);
         Tree1 = new Tree(270, 530);
         Tree2 = new Tree(330, 350);
         Tree3 = new Tree(130, 200);
         Tree4 = new Tree(420, 70);
-        npc = new NPC(320, 250,2);
+        npc1 = new NPC(320, 230,4);
+        npc2 = new NPC(300, 250,5);
+        npc3 = new NPC(280, 270,6);
 
         bear.initPosition();
         bearImageView = bear.getBearImageView();
@@ -54,13 +58,15 @@ public class Stage2 extends Application {
         Tree3.initPosition(array);
         Tree4.initPosition(array);
         teleport.initPosition(array);
-        npc.initPosition(array);
+        npc1.initPosition(array);
+        npc2.initPosition(array);
+        npc3.initPosition(array);
 
         Group root = new Group();
 
-        root.getChildren().addAll(Background, bearImageView, teleport.getImageView());
+        root.getChildren().addAll(background, bearImageView, teleport.getImageView());
 
-        root.getChildren().addAll(Tree1.treeImageView, Tree2.treeImageView, Tree3.treeImageView, Tree4.treeImageView, npc.npcImageView);
+        root.getChildren().addAll(Tree1.treeImageView, Tree2.treeImageView, Tree3.treeImageView, Tree4.treeImageView, npc1.npcImageView,npc2.npcImageView,npc3.npcImageView);
 
         final int appHeight = 600;
         final int appWidth = 600;
