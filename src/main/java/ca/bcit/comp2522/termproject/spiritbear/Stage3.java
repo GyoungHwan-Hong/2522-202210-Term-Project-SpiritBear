@@ -9,7 +9,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-public class Stage3 extends Application {
+public class  Stage3 extends Application {
 
     public static final int JUMP = 10;
     private final int[][] array = new int[600][600];
