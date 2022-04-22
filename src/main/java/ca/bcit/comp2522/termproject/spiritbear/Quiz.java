@@ -21,6 +21,10 @@ public class Quiz {
         put(10, "What year did Vancouver host the Winter Olympic Games?");
         put(11, "What is Canada's national sport?");
         put(12, "What is Vancouver's Hockey Team?");
+        put(13, "What year did Canada gain it's independence?");
+        put(14, "What day is Canada Day?");
+        put(15, "What is Canada's Capital City?");
+        put(16, "What is British Columbia's capital city?");
     }};
 
     HashMap<Integer, String> answerHashMap = new HashMap<>(){{
@@ -36,6 +40,10 @@ public class Quiz {
         put(10, "2010");
         put(11, "Lacrosse");
         put(12, "Canucks");
+        put(13, "1867");
+        put(14, "July 1st");
+        put(15, "Ottawa");
+        put(16, "Victoria");
     }};
 
     HashMap<Integer, String []> answerListHashMap = new HashMap<>(){{
@@ -50,6 +58,10 @@ public class Quiz {
        put(10, new String[]{"2006", "2010", "2014", "2008"});
        put(11, new String[]{"Soccer", "Hockey", "Figure Skating", "Lacrosse"});
        put(12, new String[]{"Raptors", "Grizzlies", "Canucks", "White Caps"});
+       put(13, new String[]{"1867", "1949", "1812", "1999"});
+       put(14, new String[]{"July 4th", "November 11th", "December 25th", "July 1st"});
+       put(15, new String[]{"Washington", "Victoria", "Toronto", "Ottawa"});
+       put(16, new String[]{"Vancouver", "Victoria Island", "Victoria", "Seattle"});
     }};
 
 
