@@ -37,6 +37,9 @@ public class Quiz {
         put(26, "How many season can you experience in Vancouver?");
         put(27, "Pick the correct names of the local mountains that allow outdoor Winter Activities");
         put(28, "What is the name of the Island that Richmond and YVR is on?");
+        put(29, "What type of leaf is on Canada's national flag?");
+        put(30, "What are the two colors in Canada's flag?");
+        put(31, "Do you enjoy Vancouver and Canada?");
     }};
 
     HashMap<Integer, String> answerHashMap = new HashMap<>(){{
@@ -68,6 +71,9 @@ public class Quiz {
         put(26, "All four seasons!");
         put(27, "Seymour, Grouse, and Cypress");
         put(28, "Lulu Island");
+        put(29, "Maple leaf");
+        put(30, "Red and White");
+        put(31, "Yes!");
     }};
 
     HashMap<Integer, String []> answerListHashMap = new HashMap<>(){{
@@ -100,6 +106,9 @@ public class Quiz {
        put(27,new String[]{"Seymour, Grouse, and Cypress", "Cypress, Baker, Burnaby", "Cypress and Grouse",
                "Seymour and Cypress"});
        put(28,new String[]{"Richmond Island", "Vancouver Island", "Lulu Island", "Moody Island"});
+       put(29,new String[]{"Maple leaf", "Poplar leaf", "Oak leaf", "Ash leaf"});
+       put(30,new String[]{"Blue and Green", "Red and White", "Red and Black", "Red, White, and Blue"});
+       put(31,new String[]{"No!", "It's Okay", "Could be better", "Yes!"});
     }};
 
 
