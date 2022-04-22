@@ -9,7 +9,7 @@ public class whistlerQuizNPC extends Obstacle{
     int npcId;
     public whistlerQuizNPC(int xCoordinate, int yCoordinate) {
         super(xCoordinate, yCoordinate, 70, 50, 3);
-        this.whistlerNPC = new Image("torchbearerL.png", true);
+        this.whistlerNPC = new Image("NPC21.png", true);
         this.whistlerNPCImageView = new ImageView(whistlerNPC);
         this.npcId = 5;
     }
