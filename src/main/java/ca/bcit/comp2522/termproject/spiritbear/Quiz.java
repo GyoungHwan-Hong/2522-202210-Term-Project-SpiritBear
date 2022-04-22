@@ -25,6 +25,18 @@ public class Quiz {
         put(14, "What day is Canada Day?");
         put(15, "What is Canada's Capital City?");
         put(16, "What is British Columbia's capital city?");
+        put(17, "What attraction can be found in GasTown?");
+        put(18, "What is Vancouver's nickname?");
+        put(19, "What is the name of Vancouver's Airport");
+        put(20, "What are the official languages of Canada?");
+        put(21, "What is Canada's official animal?");
+        put(22, "When did Vancouver host the World Exposition?");
+        put(23, "What is the name of the big park next to Downtown Vancouver?");
+        put(24, "What was the NBA team that called Vancouver home at one point in time?");
+        put(25, "What's the nickname for people who live in Vancouver?");
+        put(26, "How many season can you experience in Vancouver?");
+        put(27, "Pick the correct names of the local mountains that allow outdoor Winter Activities");
+        put(28, "What is the name of the Island that Richmond and YVR is on?");
     }};
 
     HashMap<Integer, String> answerHashMap = new HashMap<>(){{
@@ -44,6 +56,18 @@ public class Quiz {
         put(14, "July 1st");
         put(15, "Ottawa");
         put(16, "Victoria");
+        put(17, "Gastown Steam Clock");
+        put(18, "Vancity");
+        put(19, "YVR");
+        put(20, "English and French");
+        put(21, "Beaver");
+        put(22, "1987");
+        put(23, "Stanley Park");
+        put(24, "Vancouver Grizzlies");
+        put(25, "Vancouverites");
+        put(26, "All four seasons!");
+        put(27, "Seymour, Grouse, and Cypress");
+        put(28, "Lulu Island");
     }};
 
     HashMap<Integer, String []> answerListHashMap = new HashMap<>(){{
@@ -62,6 +86,20 @@ public class Quiz {
        put(14, new String[]{"July 4th", "November 11th", "December 25th", "July 1st"});
        put(15, new String[]{"Washington", "Victoria", "Toronto", "Ottawa"});
        put(16, new String[]{"Vancouver", "Victoria Island", "Victoria", "Seattle"});
+       put(17, new String[]{"Beach", "Bars", "Gastown Steam Clock", "Shopping"});
+       put(18, new String[]{"Vanity", "Vancity", "Rain Vancouver", "BC#1"});
+       put(19, new String[]{"Vancouver Airport", "YVR", "Vancouver International Airport", "Airport Vancouver"});
+       put(20, new String[]{"English and French", "English", "French", "English and Spanish"});
+       put(21,new String[]{"Deer", "Caribou", "Beaver", "Black Bear"});
+       put(22,new String[]{"1988", "1980", "1986", "1982"});
+       put(23,new String[]{"Vancouver Park", "Stanley Park", "Lion Park", "Big Trees Park"});
+       put(24,new String[]{"Vancouver Grizzlies", "Vancouver Orcas", "Vancouver Basketball", "Vancouver Polars"});
+       put(25,new String[]{"Vanpeeps", "Vancouverites", "Vancooverites", "Vancouverians"});
+       put(26,new String[]{"Vancouver only has summer and winter", "Vancouver has 3! Summer, Autumn and Winter",
+               "All four seasons!", "Vancouver only has one season, RAIN."});
+       put(27,new String[]{"Seymour, Grouse, and Cypress", "Cypress, Baker, Burnaby", "Cypress and Grouse",
+               "Seymour and Cypress"});
+       put(28,new String[]{"Richmond Island", "Vancouver Island", "Lulu Island", "Moody Island"});
     }};
 
 
