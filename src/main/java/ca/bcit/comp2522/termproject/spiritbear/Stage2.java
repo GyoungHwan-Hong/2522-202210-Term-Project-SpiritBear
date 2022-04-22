@@ -23,6 +23,7 @@ public class Stage2 extends Application {
     private NPC npc1;
     private NPC npc2;
     private NPC npc3;
+    private olympicRings oRing;
     private Bear bear;
     private QustionAnswerBox qb;
 
@@ -47,9 +48,11 @@ public class Stage2 extends Application {
         Tree2 = new Tree(330, 350);
         Tree3 = new Tree(130, 200);
         Tree4 = new Tree(420, 70);
-        npc1 = new NPC(320, 230,21);
+        oRing = new olympicRings(200, 25);
+        npc1 = new NPC(320, 230,23);
         npc2 = new NPC(300, 250,22);
-        npc3 = new NPC(280, 270,21);
+        npc3 = new NPC(280, 270,23);
+
 
         bear.initPosition();
         bearImageView = bear.getBearImageView();
@@ -57,6 +60,7 @@ public class Stage2 extends Application {
         Tree2.initPosition(array);
         Tree3.initPosition(array);
         Tree4.initPosition(array);
+        oRing.initPosition(array);
         teleport.initPosition(array);
         npc1.initPosition(array);
         npc2.initPosition(array);
@@ -66,7 +70,7 @@ public class Stage2 extends Application {
 
         root.getChildren().addAll(background, bearImageView, teleport.getImageView());
 
-        root.getChildren().addAll(Tree1.treeImageView, Tree2.treeImageView, Tree3.treeImageView, Tree4.treeImageView, npc1.npcImageView,npc2.npcImageView,npc3.npcImageView);
+        root.getChildren().addAll(Tree1.treeImageView, Tree2.treeImageView, Tree3.treeImageView, Tree4.treeImageView, npc1.npcImageView,npc2.npcImageView,npc3.npcImageView,oRing.olympicRingImageView);
 
         final int appHeight = 600;
         final int appWidth = 600;

@@ -9,37 +9,51 @@ public class Quiz {
 
 
     HashMap<Integer, String> questionHashMap = new HashMap<>(){{
+        //Stage 1 Whistler
         put(1, "What made Whistler so famous?");
         put(2, "What is name of the mountain on Whistler?");
         put(3, "What town is between Whistler and Vancouver");
         put(4, "What is the name of the highway that leads to Whistler?");
         put(5, "What are the two best seasons to visit Whistler");
+
+        //Stage 2 Beach
         put(6, "Which beach is just before Stanley Park?");
+        put(26, "How many season can you experience in Vancouver?");
+        put(32, "Is it safe to swim in the waters off Vancouver beaches?");
+        put(23, "What is the name of the big park next to Downtown Vancouver?");
+        put(15, "What is Canada's Capital City?");
+
+        //Stage 3 Cypress
+        put(27, "Pick the correct names of the local mountains that allow outdoor Winter Activities");
+        put(21, "What is Canada's official animal?");
+        put(18, "What is Vancouver's nickname?");
+        put(11, "What is Canada's national sport?");
+        put(12, "What is the name of Vancouver's NHL hockey team?");
+
+        //Stage 4 Vancouver
         put(7, "What is a double double?");
         put(8, "What is a Loonie?");
         put(9, "What is a Toonie?");
         put(10, "What year did Vancouver host the Winter Olympic Games?");
-        put(11, "What is Canada's national sport?");
-        put(12, "What is Vancouver's Hockey Team?");
-        put(13, "What year did Canada gain it's independence?");
         put(14, "What day is Canada Day?");
-        put(15, "What is Canada's Capital City?");
+
+        //Stage 5 YVR
+        put(28, "What is the name of the Island that Richmond and YVR is on?");
+
+        //Extra
+        put(13, "What year did Canada gain it's independence?");
+
         put(16, "What is British Columbia's capital city?");
         put(17, "What attraction can be found in GasTown?");
-        put(18, "What is Vancouver's nickname?");
         put(19, "What is the name of Vancouver's Airport");
         put(20, "What are the official languages of Canada?");
-        put(21, "What is Canada's official animal?");
         put(22, "When did Vancouver host the World Exposition?");
-        put(23, "What is the name of the big park next to Downtown Vancouver?");
         put(24, "What was the NBA team that called Vancouver home at one point in time?");
         put(25, "What's the nickname for people who live in Vancouver?");
-        put(26, "How many season can you experience in Vancouver?");
-        put(27, "Pick the correct names of the local mountains that allow outdoor Winter Activities");
-        put(28, "What is the name of the Island that Richmond and YVR is on?");
         put(29, "What type of leaf is on Canada's national flag?");
         put(30, "What are the two colors in Canada's flag?");
         put(31, "Do you enjoy Vancouver and Canada?");
+
     }};
 
     HashMap<Integer, String> answerHashMap = new HashMap<>(){{
@@ -74,6 +88,7 @@ public class Quiz {
         put(29, "Maple leaf");
         put(30, "Red and White");
         put(31, "Yes!");
+        put(32, "Of course!");
     }};
 
     HashMap<Integer, String []> answerListHashMap = new HashMap<>(){{
@@ -109,6 +124,7 @@ public class Quiz {
        put(29,new String[]{"Maple leaf", "Poplar leaf", "Oak leaf", "Ash leaf"});
        put(30,new String[]{"Blue and Green", "Red and White", "Red and Black", "Red, White, and Blue"});
        put(31,new String[]{"No!", "It's Okay", "Could be better", "Yes!"});
+       put(32,new String[]{"Of Course!", "No it's gross", "Ocean water? Yuck!", "maybe?"});
     }};
 
 
