@@ -46,11 +46,11 @@ public class Stage4 extends Application {
         background = new ImageView(bg);
 
         gastownClock = new GastownClock( 100, 100);
-        scienceWorld = new ScienceWorld( 550, 550);
+        scienceWorld = new ScienceWorld( 450, 450);
         Tree1 = new Tree(270, 530);
         Tree2 = new Tree(330, 350);
         Tree3 = new Tree(130, 200);
-        Tree4 = new Tree(420, 70);
+        Tree4 = new Tree(250, 150);
         npc = new NPC(320, 250,41);
 
         scienceWorld.initPosition(array);
