@@ -17,11 +17,11 @@ public class Login {
         // Register the Driver
         Class.forName("com.mysql.cj.jdbc.Driver");
         // Identify the driver, the rdbms, the host, the port, and the schema name
-        final String URL = "jdbc:mysql://localhost:3306/spiritbear";
+        final String URL = "jdbc:mysql://localhost:3306/comp2522";
 
         final Properties connectionProperties = new Properties();
-        connectionProperties.put("user", "spiritbear");
-        connectionProperties.put("password", "aiden2522david");
+        connectionProperties.put("user", "comp2522");
+        connectionProperties.put("password", "I was born in 1973");
 
         final Connection connection = DriverManager.getConnection(URL, connectionProperties);
 
@@ -31,7 +31,7 @@ public class Login {
 
         Statement stmt = connection.createStatement();
 
-        String SQL = "select password from userinfo where userID = ?";
+        String SQL = "select password from users where user_id = ?";
         pstmt = connection.prepareStatement(SQL);
         pstmt.setString(1, userId);
         rs = pstmt.executeQuery();
