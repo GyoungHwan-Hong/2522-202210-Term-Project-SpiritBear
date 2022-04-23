@@ -40,7 +40,7 @@ public class Stage1 extends Application {
 
         tempStage = stage;
 
-        bear = new Bear("Bear",300, 300, 40,40,100, 100, 1, 250, 30);
+        bear = new Bear("Bear",300, 300, 40,40,100, 100, 1, 0, 30);
 
         Image bg = new Image("bg2.png", true);
 
@@ -135,6 +135,7 @@ public class Stage1 extends Application {
                 if (bear.interaction(array) != 0) {
                     qb = new QustionAnswerBox(bear.interaction(array));
                     if (qb.getUserChoice()) {
+                        bear.addExperience();
                         bear.LevelUpBear();
                         bear.updateImage();
                         bearImageView = bear.getBearImageView();

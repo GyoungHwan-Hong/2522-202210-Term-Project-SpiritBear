@@ -23,8 +23,19 @@ public class Bear extends DynamicActors {
         bearImageView.setImage(bearImage);
     }
 
+    public void addExperience() {
+        experience++;
+        System.out.println("Bear get an experience." + experience);
+    }
+
     public void LevelUpBear() {
+        if (experience == level*5) {
             level++;
+            System.out.println("Bear Level UP!!!");
+        }
+        else {
+            System.out.println("You need more experience." + experience+ "/" + level * 5);
+        }
     }
 
     public ImageView getBearImageView() {
