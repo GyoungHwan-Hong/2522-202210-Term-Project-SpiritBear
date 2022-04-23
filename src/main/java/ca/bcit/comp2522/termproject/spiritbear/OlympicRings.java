@@ -7,6 +7,7 @@ public class OlympicRings extends Obstacle{
 
     Image olmypicRingImage;
     ImageView olympicRingImageView;
+
     public OlympicRings(int xCoordinate, int yCoordinate) {
         super(xCoordinate, yCoordinate, 25, 400, 1);
         this.olmypicRingImage = new Image("olympicrings.png", true);
