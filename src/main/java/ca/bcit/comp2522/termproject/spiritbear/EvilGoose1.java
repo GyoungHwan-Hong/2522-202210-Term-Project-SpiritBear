@@ -10,5 +10,8 @@ public class EvilGoose1 extends Obstacle{
         super(xCoordinate, yCoordinate, 40, 40, 1);
         this.evilGooseL = new Image("EvilGoose(1).png", true);
         this.evilGooseImageView = new ImageView(evilGooseL);
+
+        this.evilGooseImageView.setX(xCoordinate);
+        this.evilGooseImageView.setY(yCoordinate);
     }
 }
