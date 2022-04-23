@@ -3,6 +3,7 @@ package ca.bcit.comp2522.termproject.spiritbear;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
@@ -146,6 +147,14 @@ public class Stage5 extends Application {
         stage.show();
     }
 
+    public void showAlert() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("MESSAGE");
+        alert.setHeaderText("Congratulation!");
+        alert.setContentText("CLEAR ALL THE STAGES!");
+        alert.showAndWait();
+    }
+
     private void processKeyPress(KeyEvent keyEvent) {
         switch (keyEvent.getCode()) {
             case UP:
@@ -176,9 +185,7 @@ public class Stage5 extends Application {
                 if (bear.interaction(array) != 0) {
                     qb = new QustionAnswerBox(bear.interaction(array));
                     if (qb.getUserChoice()) {
-                        bear.LevelUpBear();
-                        bear.updateImage();
-                        bearImageView = bear.getBearImageView();
+                        showAlert();
                     }
                     break;
                 }

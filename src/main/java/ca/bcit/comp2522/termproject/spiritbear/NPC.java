@@ -16,13 +16,6 @@ public class NPC extends Obstacle {
         this.npcId = npcId;
     }
 
-    public NPC (int xCoordinate, int yCoordinate, int height, int width, int npcId) {
-        super(xCoordinate, yCoordinate, height, width, npcId);
-        this.npc = new Image("NPC"+npcId+".png", true);
-        this.npcImageView = new ImageView(npc);
-        this.npcId = npcId;
-    }
-
     public void initPosition(int[][] arr) {
         int si = xCoordinate - (width / 2);
         int fi = xCoordinate + (width / 2);
