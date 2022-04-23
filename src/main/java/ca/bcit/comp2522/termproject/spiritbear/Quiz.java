@@ -24,11 +24,11 @@ public class Quiz {
         put(65, "What is Canada's Capital City?");
 
         //Stage 3 Cypress
-        put(27, "Pick the correct names of the local mountains that allow outdoor Winter Activities");
-        put(21, "What is Canada's official animal?");
-        put(18, "What is Vancouver's nickname?");
-        put(11, "What is Canada's national sport?");
-        put(12, "What is the name of Vancouver's NHL hockey team?");
+        put(31, "Pick the correct names of the local mountains that allow outdoor Winter Activities");
+        put(32, "What is Canada's official animal?");
+        put(71, "What is Vancouver's nickname?");
+        put(72, "What is Canada's national sport?");
+        put(73, "What is the name of Vancouver's NHL hockey team?");
 
         //Stage 4 Vancouver
         put(7, "What is a double double?");
@@ -52,7 +52,7 @@ public class Quiz {
         put(25, "What's the nickname for people who live in Vancouver?");
         put(29, "What type of leaf is on Canada's national flag?");
         put(30, "What are the two colors in Canada's flag?");
-        put(31, "Do you enjoy Vancouver and Canada?");
+        put(99, "Do you enjoy Vancouver and Canada?");
 
     }};
 
@@ -67,27 +67,27 @@ public class Quiz {
         put(8, "$1 Coin");
         put(9, "$2 Coin");
         put(10, "2010");
-        put(11, "Lacrosse");
-        put(12, "Canucks");
+        put(72, "Lacrosse");
+        put(73, "Canucks");
         put(13, "1867");
         put(14, "July 1st");
         put(65, "Ottawa");
         put(16, "Victoria");
         put(17, "Gastown Steam Clock");
-        put(18, "Vancity");
+        put(71, "Vancity");
         put(19, "YVR");
         put(20, "English and French");
-        put(21, "Beaver");
+        put(32, "Beaver");
         put(22, "1987");
         put(64, "Stanley Park");
         put(24, "Vancouver Grizzlies");
         put(25, "Vancouverites");
         put(62, "All four seasons!");
-        put(27, "Seymour, Grouse, and Cypress");
+        put(31, "Seymour, Grouse, and Cypress");
         put(28, "Lulu Island");
         put(29, "Maple leaf");
         put(30, "Red and White");
-        put(31, "Yes!");
+        put(99, "Yes!");
         put(63, "Of course!");
     }};
 
@@ -102,29 +102,29 @@ public class Quiz {
        put(8, new String[]{"A bird", "One lunatic", "$1 Coin", "A Cartoon"});
        put(9, new String[]{"Two birds", "Two loonies", "Two - $1 Coins", "$2 Coin"});
        put(10, new String[]{"2006", "2010", "2014", "2008"});
-       put(11, new String[]{"Soccer", "Hockey", "Figure Skating", "Lacrosse"});
-       put(12, new String[]{"Raptors", "Grizzlies", "Canucks", "White Caps"});
+       put(72, new String[]{"Soccer", "Hockey", "Figure Skating", "Lacrosse"});
+       put(73, new String[]{"Raptors", "Grizzlies", "Canucks", "White Caps"});
        put(13, new String[]{"1867", "1949", "1812", "1999"});
        put(14, new String[]{"July 4th", "November 11th", "December 25th", "July 1st"});
        put(65, new String[]{"Washington", "Victoria", "Toronto", "Ottawa"});
        put(16, new String[]{"Vancouver", "Victoria Island", "Victoria", "Seattle"});
        put(17, new String[]{"Beach", "Bars", "Gastown Steam Clock", "Shopping"});
-       put(18, new String[]{"Vanity", "Vancity", "Rain Vancouver", "BC#1"});
+       put(71, new String[]{"Vanity", "Vancity", "Rain Vancouver", "BC#1"});
        put(19, new String[]{"Vancouver Airport", "YVR", "Vancouver International Airport", "Airport Vancouver"});
        put(20, new String[]{"English and French", "English", "French", "English and Spanish"});
-       put(21,new String[]{"Deer", "Caribou", "Beaver", "Black Bear"});
+       put(32,new String[]{"Deer", "Caribou", "Beaver", "Black Bear"});
        put(22,new String[]{"1988", "1980", "1986", "1982"});
        put(64,new String[]{"Vancouver Park", "Stanley Park", "Lion Park", "Big Trees Park"});
        put(24,new String[]{"Vancouver Grizzlies", "Vancouver Orcas", "Vancouver Basketball", "Vancouver Polars"});
        put(25,new String[]{"Vanpeeps", "Vancouverites", "Vancooverites", "Vancouverians"});
        put(62,new String[]{"Vancouver only has summer and winter", "Vancouver has 3! Summer, Autumn and Winter",
                "All four seasons!", "Vancouver only has one season, RAIN."});
-       put(27,new String[]{"Seymour, Grouse, and Cypress", "Cypress, Baker, Burnaby", "Cypress and Grouse",
+       put(31,new String[]{"Seymour, Grouse, and Cypress", "Cypress, Baker, Burnaby", "Cypress and Grouse",
                "Seymour and Cypress"});
        put(28,new String[]{"Richmond Island", "Vancouver Island", "Lulu Island", "Moody Island"});
        put(29,new String[]{"Maple leaf", "Poplar leaf", "Oak leaf", "Ash leaf"});
        put(30,new String[]{"Blue and Green", "Red and White", "Red and Black", "Red, White, and Blue"});
-       put(31,new String[]{"No!", "It's Okay", "Could be better", "Yes!"});
+       put(99,new String[]{"No!", "It's Okay", "Could be better", "Yes!"});
        put(63,new String[]{"Of course!", "No it's gross", "Ocean water? Yuck!", "maybe?"});
     }};
 
