@@ -32,7 +32,7 @@ public class Stage5 extends Application {
 
         bear = new Bear("Bear",300, 300, 40,40,100, 100, 5, 250, 30);
 
-        Image bg = new Image("bg4.png", true);
+        Image bg = new Image("bg5.png", true);
 
 
         background = new ImageView(bg);
