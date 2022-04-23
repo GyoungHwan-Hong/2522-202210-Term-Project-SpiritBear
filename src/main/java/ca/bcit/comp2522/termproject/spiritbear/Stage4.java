@@ -20,6 +20,8 @@ public class Stage4 extends Application {
     private Tree Tree2;
     private Tree Tree3;
     private Tree Tree4;
+    private ScienceWorld scienceWorld;
+    private GastownClock gastownClock;
     private NPC npc;
     private Bear bear;
     private QustionAnswerBox qb;
@@ -35,17 +37,24 @@ public class Stage4 extends Application {
 
         bear = new Bear("Bear",300, 300, 40,40,100, 100, 4, 250, 30);
 
-        Image bg = new Image("bg.png", true);
+        Image bg = new Image("bg4.png", true);
 
         teleport = new Teleport( 200, 200, 40, 40, 100);
 
+
+
         background = new ImageView(bg);
+
+        gastownClock = new GastownClock( 100, 100);
+        scienceWorld = new ScienceWorld( 550, 550);
         Tree1 = new Tree(270, 530);
         Tree2 = new Tree(330, 350);
         Tree3 = new Tree(130, 200);
         Tree4 = new Tree(420, 70);
-        npc = new NPC(320, 250,4);
+        npc = new NPC(320, 250,41);
 
+        scienceWorld.initPosition(array);
+        gastownClock.initPosition(array);
         bear.initPosition();
         bearImageView = bear.getBearImageView();
         Tree1.initPosition(array);
@@ -59,7 +68,8 @@ public class Stage4 extends Application {
 
         root.getChildren().addAll(background, bearImageView, teleport.getImageView());
 
-        root.getChildren().addAll(Tree1.treeImageView, Tree2.treeImageView, Tree3.treeImageView, Tree4.treeImageView, npc.npcImageView);
+        root.getChildren().addAll(Tree1.treeImageView, Tree2.treeImageView, Tree3.treeImageView, Tree4.treeImageView,
+                                  npc.npcImageView, scienceWorld.ScienceImageView, gastownClock.clockImageView);
 
         final int appHeight = 600;
         final int appWidth = 600;

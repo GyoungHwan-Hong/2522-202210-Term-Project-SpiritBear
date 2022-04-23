@@ -30,12 +30,12 @@ abstract class Obstacle {
 
     public void initPosition(int[][] arr) {
 
-        int si = xCoordinate - height / 2;
-        int fi = xCoordinate + height / 2;
-        int sj = yCoordinate - width / 2;
-        int fj = yCoordinate + width / 2;
+        int si = xCoordinate - (width / 2);
+        int fi = xCoordinate + (width / 2);
+        int sj = yCoordinate - (height / 2);
+        int fj = yCoordinate + (height / 2);
 
-        for ( int i = si; i <= fi; i++) {
+        for (int i = si; i <= fi; i++) {
             for (int j = sj; j <= fj ; j++) {
                 arr[i][j] = id;
             }
