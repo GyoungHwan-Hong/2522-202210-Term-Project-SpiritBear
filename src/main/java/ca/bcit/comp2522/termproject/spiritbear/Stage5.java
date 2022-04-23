@@ -16,46 +16,43 @@ public class Stage5 extends Application {
 
     private ImageView background;
     private ImageView bearImageView;
-    private Tree Tree1;
-    private Tree Tree2;
-    private Tree Tree3;
-    private Tree Tree4;
+    private ControlTower tower;
     private NPC npc;
+    private EvilGoose goose1;
     private Bear bear;
     private QustionAnswerBox qb;
 
     private Teleport teleport;
-    private Stage temp_stage;
+    //private Stage temp_stage;
 
     @Override
     public void start(Stage stage) {
 
+        //temp_stage = stage;
+
         bear = new Bear("Bear",300, 300, 40,40,100, 100, 5, 250, 30);
 
-        Image bg = new Image("bg.png", true);
+        Image bg = new Image("bg3.png", true);
 
 
         background = new ImageView(bg);
-        Tree1 = new Tree(270, 530);
-        Tree2 = new Tree(330, 350);
-        Tree3 = new Tree(130, 200);
-        Tree4 = new Tree(420, 70);
-        npc = new NPC(320, 250,5);
+        tower = new ControlTower(300, 300);
+        npc = new NPC(475, 250,92);
+        teleport = new Teleport(500, 500, 40, 40, 100);
+        goose1 = new EvilGoose(200, 400);
 
         bear.initPosition();
         bearImageView = bear.getBearImageView();
-        Tree1.initPosition(array);
-        Tree2.initPosition(array);
-        Tree3.initPosition(array);
-        Tree4.initPosition(array);
         teleport.initPosition(array);
         npc.initPosition(array);
+        tower.initPosition(array);
+        goose1.initPosition(array);
 
         Group root = new Group();
 
         root.getChildren().addAll(background, bearImageView);
 
-        root.getChildren().addAll(Tree1.treeImageView, Tree2.treeImageView, Tree3.treeImageView, Tree4.treeImageView, npc.npcImageView);
+        root.getChildren().addAll(npc.npcImageView, tower.controlImageView, goose1.gooseImageView);
 
         final int appHeight = 600;
         final int appWidth = 600;
