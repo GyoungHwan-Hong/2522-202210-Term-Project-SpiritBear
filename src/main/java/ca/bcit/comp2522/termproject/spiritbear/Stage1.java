@@ -55,7 +55,7 @@ public class Stage1 extends Application {
         Tree5 = new EverGreenTree(70, 245);
         Tree6 = new EverGreenTree(45, 245);
         Tree7= new EverGreenTree(20, 245);
-        oring = new OlympicRings(200, 45);
+        oring = new OlympicRings(200, 60);
 
         npc = new NPC(450, 275,45);
         npc2 = new NPC(50,500, 41);
@@ -72,6 +72,7 @@ public class Stage1 extends Application {
         Tree5.initPosition(array);
         Tree6.initPosition(array);
         Tree7.initPosition(array);
+        oring.initPosition(array);
         teleport.initPosition(array);
         npc.initPosition(array);
         npc2.initPosition(array);
