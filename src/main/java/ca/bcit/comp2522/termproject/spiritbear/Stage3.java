@@ -58,11 +58,11 @@ public class  Stage3 extends Application {
         Tree7= new EverGreenTree(20, 245);
         cyRing = new CypressRing(200, 60);
         inukshuk = new Inukshuk(450, 250);
-        npc = new NPC(320, 250,31);
-        npc2 = new NPC(400, 400, 32);
-        npc3 = new NPC(200, 350, 71);
-        npc4 = new NPC(100, 300, 72);
-        npc5 = new NPC(100, 500, 73);
+        npc = new NPC(320, 250,92, 92,31);
+        npc2 = new NPC(400, 400, 92,92, 32);
+        npc3 = new NPC(200, 350, 92, 92, 71);
+        npc4 = new NPC(100, 300, 92, 92, 72);
+        npc5 = new NPC(100, 500, 40, 40, 73);
 
         bear.initPosition();
         bearImageView = bear.getBearImageView();

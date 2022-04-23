@@ -9,29 +9,37 @@ public class NPC extends Obstacle {
     ImageView npcImageView;
     int npcId;
 
-    public NPC(int xCoordinate, int yCoordinate, int npcId) {
+    public NPC (int xCoordinate, int yCoordinate, int npcId) {
         super(xCoordinate, yCoordinate, 40, 40, npcId);
         this.npc = new Image("NPC"+npcId+".png", true);
         this.npcImageView = new ImageView(npc);
         this.npcId = npcId;
     }
 
-    public void initPosition(int[][] arr) {
+    public NPC (int xCoordinate, int yCoordinate, int height, int width, int npcId) {
+        super(xCoordinate, yCoordinate, height, width, npcId);
+        this.npc = new Image("NPC"+npcId+".png", true);
+        this.npcImageView = new ImageView(npc);
+        this.npcId = npcId;
+    }
 
-        int si = xCoordinate - height / 2;
-        int fi = xCoordinate + height / 2;
-        int sj = yCoordinate - width / 2;
-        int fj = yCoordinate + width / 2;
+    public void initPosition(int[][] arr) {
+        int si = xCoordinate - (width / 2);
+        int fi = xCoordinate + (width / 2);
+        int sj = yCoordinate - (height / 2);
+        int fj = yCoordinate + (height / 2);
 
         this.npcImageView.setX(this.xCoordinate);
         this.npcImageView.setY(this.yCoordinate);
 
-        for ( int i = si; i <= fi; i++) {
-            for (int j = sj; j <= fj ; j++) {
-                arr[i][j] = npcId;
+        for (int i = si; i <= fi; i++) {
+            for (int j = sj; j <= fj; j++) {
+                arr[i][j] = id;
             }
         }
     }
+
+
 
     public int getNpcId(final int inputNPCId) {
         if (inputNPCId == this.npcId) {

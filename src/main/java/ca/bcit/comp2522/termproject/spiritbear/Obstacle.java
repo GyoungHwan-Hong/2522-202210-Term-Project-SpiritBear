@@ -36,7 +36,7 @@ abstract class Obstacle {
         int fj = yCoordinate + (height / 2);
 
         for (int i = si; i <= fi; i++) {
-            for (int j = sj; j <= fj ; j++) {
+            for (int j = sj; j <= fj; j++) {
                 arr[i][j] = id;
             }
         }
